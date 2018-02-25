@@ -36,8 +36,8 @@ function! FileStyleCreateIgnoredPatternGroup()
   let l:normal_group = substitute(l:normal_group, '\n', '', 'g')
 
   if (match(l:normal_group, 'ctermbg=') == -1)
-    echom 'FileStyle: ctermbg parameter should be defined explicitly.
-         \ Ignored patterns are disabled'
+    "echom 'FileStyle: ctermbg parameter should be defined explicitly.
+         "\ Ignored patterns are disabled'
     execute 'highlight clear FileStyleIgnoredPattern'
     return
   endif
